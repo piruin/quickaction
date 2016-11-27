@@ -2,6 +2,7 @@
 
 ## Version 2.1
 - Add small stroke for better visibility
+- Can set default color and default text color 
 
 ## Version 2.0 *(2016-11-6)*
 

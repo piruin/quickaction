@@ -49,6 +49,17 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
   public static final int HORIZONTAL = LinearLayout.HORIZONTAL;
   public static final int VERTICAL = LinearLayout.VERTICAL;
 
+  private static int defaultColor = Color.WHITE;
+  private static int defaultTextColor = Color.BLACK;
+
+  public static void setDefaultTextColor(int defaultTextColor) {
+    QuickAction.defaultTextColor = defaultTextColor;
+  }
+
+  public static void setDefaultColor(int defaultColor) {
+    QuickAction.defaultColor = defaultColor;
+  }
+
   private WindowManager windowManager;
   private View rootView;
   private View arrowUp;
@@ -67,7 +78,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
   private int insertPos;
   private int orientation;
   private int rootWidth = 0;
-  private int textColor = Color.BLACK;
+  private int textColor = defaultTextColor;
 
   private final int stroke;
   private final int shadowColor;
@@ -113,7 +124,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
     scroller = (ViewGroup)rootView.findViewById(R.id.scroller);
 
     setContentView(rootView);
-    setColor(Color.WHITE);
+    setColor(defaultColor);
   }
 
   /**
