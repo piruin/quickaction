@@ -20,7 +20,7 @@ and publish to JCenter.
 ## Download
 
 ### [JCenter]
-k
+
 - **Step 1** - set JCenter repository (This step not require for modern android project)
 - **Step 2** - Add dependencies on app module
 

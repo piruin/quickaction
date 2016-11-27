@@ -18,7 +18,9 @@
 package me.piruin.quickaction.sample;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +40,10 @@ public class SampleActivity extends AppCompatActivity {
 
   @Override public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    //Config default color
+    QuickAction.setDefaultColor(ResourcesCompat.getColor(getResources(), R.color.teal, null));
+    QuickAction.setDefaultTextColor(Color.BLACK);
 
     setContentView(R.layout.activity_sample);
 
@@ -61,6 +67,7 @@ public class SampleActivity extends AppCompatActivity {
     //add action items into QuickAction
     quickAction.addActionItem(nextItem);
     quickAction.addActionItem(prevItem);
+    quickAction.setTextColor(Color.YELLOW);
     quickAction.addActionItem(searchItem);
     quickAction.addActionItem(infoItem);
     quickAction.addActionItem(eraseItem);
@@ -108,7 +115,6 @@ public class SampleActivity extends AppCompatActivity {
     final QuickAction quickIntent = new QuickIntentAction(this)
       .setActivityIntent(sendIntent)
       .create();
-    quickIntent.setColorRes(R.color.teal);
     quickIntent.setAnimStyle(QuickAction.Animation.REFLECT);
 
     Button btn3 = (Button)this.findViewById(R.id.button3);
