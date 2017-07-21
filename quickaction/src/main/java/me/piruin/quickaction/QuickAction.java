@@ -211,17 +211,25 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
     addActionView(position, createViewFrom(action));
   }
 
-  private void addActionView(int position, View actionView) {
-    if (orientation == HORIZONTAL && position != 0) {
-      position *= 2;
-      int separatorPos = position - 1;
-      View separator = new View(getContext());
-      separator.setBackgroundColor(Color.argb(32, 0, 0, 0));
-      int width = resource.getDimensionPixelOffset(R.dimen.separator_width);
-      track.addView(separator, separatorPos, new LayoutParams(width, MATCH_PARENT));
+ private void addActionView(int position, View actionView) {
+        if (orientation == HORIZONTAL && position != 0) {
+            position *= 2;
+            int separatorPos = position - 1;
+            View separator = new View(getContext());
+            separator.setBackgroundColor(Color.argb(32, 0, 0, 0));
+            int width = resource.getDimensionPixelOffset(R.dimen.separator_width);
+            track.addView(separator, separatorPos, new LayoutParams(width, MATCH_PARENT));
+        } else if (orientation == VERTICAL && position != 0) {
+            position *= 2;
+            int separatorPos = position - 1;
+            View separator = new View(getContext());
+            separator.setBackgroundColor(Color.argb(32, 0, 0, 0));
+            int width = resource.getDimensionPixelOffset(R.dimen.separator_width);
+            track.addView(separator, separatorPos, new LayoutParams(MATCH_PARENT, width));
+        }
+        track.addView(actionView, position);
     }
-    track.addView(actionView, position);
-  }
+
 
   /**
    * Add action item at specify position
