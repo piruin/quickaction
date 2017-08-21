@@ -20,6 +20,7 @@ package me.piruin.quickaction.sample;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -64,9 +65,15 @@ public class SampleActivity extends AppCompatActivity {
 
     //create QuickAction. Use QuickAction.VERTICAL or QuickAction.HORIZONTAL param to define layout
     //orientation
-    quickAction = new QuickAction(this, QuickAction.HORIZONTAL);
+    quickAction = new QuickAction(this, QuickAction.VERTICAL);
     quickAction.setColorRes(R.color.pink);
     quickAction.setTextColorRes(R.color.white);
+
+    //set vertical divider with color
+    quickAction.setVerticalDivider(ContextCompat.getColor(this,R.color.white));
+
+    //set only vertical divider
+    quickAction.setVerticalDivider();
 
     //add action items into QuickAction
     quickAction.addActionItem(nextItem);
