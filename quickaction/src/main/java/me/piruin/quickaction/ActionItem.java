@@ -22,7 +22,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
 import android.text.TextUtils;
-import java.util.Objects;
 
 /**
  * Action item, displayed as menu with icon and text.
@@ -210,6 +209,6 @@ public class ActionItem {
   }
 
   @Override public int hashCode() {
-    return Objects.hash(actionId);
+    return actionId;
   }
 }

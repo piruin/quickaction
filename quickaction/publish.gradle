@@ -1,8 +1,3 @@
-dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile "com.android.support:support-annotations:$ANDROID_SUPPORT_VERSION"
-}
-
 task sourcesJar(type: Jar) {
   from android.sourceSets.main.java.srcDirs
   classifier = 'sources'

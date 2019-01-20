@@ -43,6 +43,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -296,9 +297,9 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
         Drawable icon = action.getIconDrawable(getContext());
         icon.setBounds(0, 0, iconSize, iconSize);
         if (orientation == HORIZONTAL) {
-          textView.setCompoundDrawablesRelative(null, icon, null, null);
+          textView.setCompoundDrawables(null, icon, null, null);
         } else {
-          textView.setCompoundDrawablesRelative(icon, null, null, null);
+          textView.setCompoundDrawables(icon, null, null, null);
         }
       }
       actionView = textView;
