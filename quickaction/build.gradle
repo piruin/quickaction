@@ -47,5 +47,3 @@ dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation "com.android.support:support-annotations:$ANDROID_SUPPORT_VERSION"
 }
-
-apply from: 'publish.gradle'
