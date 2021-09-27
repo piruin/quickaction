@@ -1,7 +1,6 @@
 # Quick Action 
 [![License](https://img.shields.io/badge/License-Apache%202.0-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Build Status](https://travis-ci.org/piruin/quickaction.svg?branch=master)](https://travis-ci.org/piruin/quickaction) 
-[![Download](https://api.bintray.com/packages/blazei/maven/QuickAction/images/download.svg)](https://bintray.com/blazei/maven/QuickAction/_latestVersion)
 [![Download](https://jitpack.io/v/piruin/quickaction.svg)](https://jitpack.io/#piruin/quickaction)
 
 Quick Action is a small android library for easy create Tooltips with some action or
@@ -18,18 +17,6 @@ and publish to JCenter.
 ![Quick Action demo][demo]
 
 ## Download
-
-### [JCenter]
-
-- **Step 1** - set JCenter repository (This step not require for modern android project)
-- **Step 2** - Add dependencies on app module
-
-```groovy
-dependencies {
-  compile 'me.piruin:quickaction:LATEST_VERSION'
-}
-```
-Change `LATEST_VERSION` to latest version name
 
 ### [JitPack]
 
